@@ -16,3 +16,11 @@ Optimize with a good algorithm so search is fast for large file systems (think p
 
 '''
 
+#Algorithm
+'''
+using Recursion and Iteration to Explore directories and subdirectories.
+
+
+Skip irrelevant branches early (e.g., if folder name doesn’t match, break).
+
+'''
