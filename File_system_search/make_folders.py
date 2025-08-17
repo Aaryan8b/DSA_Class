@@ -32,11 +32,14 @@ use nested loops to make sub folders and files simultaneously
 import os
 
 for i in range(3):                              #for folders
-    folder_name="parentfolder"+str(i)
+    folder_name=f"parentfolde{i}"
     os.makedirs(folder_name, exist_ok=True)     #exist_ok=True to avoid errors if directory already exists
     for j in range (2):                         #for subfolders
-        subfolder_name="subfolder"+str(j)
-        os.makedirs(folder_name+"/"+subfolder_name, exist_ok=True)
+        subfolder_name=f"subfolder{j}"
+        os.makedirs(folder_name+"/"+subfolder_name, exist_ok=True)     
+# OR             
+# folder_name+"/"+subfolder_name or subfolder_path = os.path.join(folder_name, subfolder_name)
+
         for k in range(2):                      #for text files
             file_path = f"{folder_name}/{subfolder_name}/file{str(k)}.txt"
             with open(file_path, "w") as f:
